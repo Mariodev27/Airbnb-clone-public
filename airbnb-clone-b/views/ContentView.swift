@@ -9,8 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        ScrollView(.horizontal, showsIndicators: false){
         VStack {
-            ScrollView(.horizontal, showsIndicators: false){
+            
                 HStack(spacing: 50) {
                     Category(icon: "ovni", text: "OMG!")
                     Category(icon: "beaches", text: "Beaches")

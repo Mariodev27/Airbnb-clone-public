@@ -15,12 +15,13 @@ struct Category: View {
         VStack {
             HStack{
                 VStack{
-                    Image(systemName:
+                    Image(
                         icon)
                         .frame(width: 28, height: 28)
                         .font(.system(size: 28))
                     Text(text)
                         .font(.system(size: 12, weight: .semibold))
+                        .foregroundStyle(.gray)
                 }
             }
         }
@@ -29,6 +30,6 @@ struct Category: View {
 
 struct Category_Previews: PreviewProvider {
     static var previews: some View {
-        Category(icon: "airplane.circle.fill", text: "OMG!")
+        Category(icon: "home", text: "OMG!")
     }
 }
