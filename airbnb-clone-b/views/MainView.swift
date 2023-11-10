@@ -26,7 +26,7 @@ struct MainView: View {
                         Text("Wishlist")
                     }
                 }
-            WishlistView()
+            TripsView()
                 .tabItem{
                     VStack{
                         Image("logo-icon")
@@ -34,7 +34,7 @@ struct MainView: View {
                         Text("Wishlist")
                     }
                 }
-            WishlistView()
+            InboxView()
                 .tabItem{
                     VStack{
                         Image("inbox")
@@ -42,7 +42,7 @@ struct MainView: View {
                         Text("Wishlist")
                     }
                 }
-            WishlistView()
+            ProfileView()
                 .tabItem{
                     VStack{
                         Image("profile")
