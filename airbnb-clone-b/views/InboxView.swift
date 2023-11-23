@@ -8,8 +8,40 @@
 import SwiftUI
 
 struct InboxView: View {
+    @State private var selectedTab = "Mensajes"
+    let tabs = ["Mensajes", "Notificaciones"]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text("INBOX")
+                .font(.title2)
+                .padding()
+            HStack {
+                ForEach(tabs, id: \.self) { tab in
+                    VStack {
+                        Text(tab)
+                            .padding()
+                            .onTapGesture {
+                                selectedTab = tab
+                            }
+                        Rectangle()
+                            .frame(height: 2)
+                            .foregroundColor(selectedTab == tab ? .blue : .clear)
+                    }
+                }
+            }
+            .padding([.leading, .trailing])
+            switch selectedTab {
+            case "Mensajes":
+                Text("No tienes mensajes No Leidos")
+            case "Notificaciones":
+                Text("You're all caught up")
+            default:
+                EmptyView()
+            }
+            Spacer()
+        }
+        .padding(.leading)
     }
 }
 
