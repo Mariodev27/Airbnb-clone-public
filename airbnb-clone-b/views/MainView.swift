@@ -2,61 +2,50 @@
 //  MainView.swift
 //  airbnb-clone-b
 //
-//  Created by Alumno on 10/11/23.
+//  Created by MAC45 on 10/11/23.
 //
 
 import SwiftUI
 
 struct MainView: View {
+    init() {
+        let appearance = UITabBarAppearance()
+        appearance.backgroundColor = UIColor.white
+        UITabBar.appearance().standardAppearance = appearance
+    }
     var body: some View {
-        TabView {
+        TabView{
             ContentView()
                 .tabItem{
-                    VStack{
-                        Image("magnifing")
-                            .renderingMode(.template)
-                        Text("Explore")
-                    }
+                    TabIcon(image: "magnifing", text: "Explore")
                 }
             WishlistView()
                 .tabItem{
-                    VStack{
-                        Image("heart")
-                            .renderingMode(.template)
-                        Text("Wishlist")
-                    }
+                    TabIcon(image: "heart", text: "Wishlist")
                 }
             TripsView()
                 .tabItem{
-                    VStack{
-                        Image("logo-icon")
-                            .renderingMode(.template)
-                        Text("Wishlist")
-                    }
+                    TabIcon(image: "logo-icon", text: "Trips")
                 }
             InboxView()
                 .tabItem{
-                    VStack{
-                        Image("inbox")
-                            .renderingMode(.template)
-                        Text("Wishlist")
-                    }
+                    TabIcon(image: "inbox", text: "Inbox")
                 }
             ProfileView()
                 .tabItem{
-                    VStack{
-                        Image("profile")
-                            .renderingMode(.template)
-                        Text("Profile")
-                    }
+                    TabIcon(image: "profile", text: "Profile")
                 }
         }
-        .tint(Color("AirbnbPrimary"))
+        .accentColor(Color("AirbnbPrimary"))
+        .onAppear {
+            UITabBar.appearance().backgroundColor = UIColor.white
+            
+        }
     }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
+    
+    struct MainView_Previews: PreviewProvider {
+        static var previews: some View {
+            MainView()
+        }
     }
 }

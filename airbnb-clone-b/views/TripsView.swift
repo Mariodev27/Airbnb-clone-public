@@ -1,5 +1,5 @@
 //
-//  TripsView.swift
+//  TripView.swift
 //  airbnb-clone-b
 //
 //  Created by Mariodev27 on 10/11/23.
@@ -18,42 +18,50 @@ struct TripsView: View {
             VStack {
                 Spacer()
                 HStack {
-                    Image("image")
-                        .resizable()
-                        .frame(width: 120)
-                    VStack(alignment: .leading, spacing:4) {
-                        Text("La Calera, Colombia")
-                            .font(.caption)
-                            .fontWeight(.semibold)
-                            .padding(.leading)
-                        Spacer()
-                        Text("Nov 19 - 24")
-                            .font(.caption)
-                            .fontWeight(.light)
-                            .padding(.leading)
-                        Text("S/ 268 night")
-                            .font(.caption)
-                            .padding(.leading)
-                        Spacer()
-                        HStack {
-                            Spacer()
-                            Image(systemName: "star.fill")
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 17, height: 15)
-                            Text("4.91")
-                                .font(.caption)
-                        }
+                    ZStack(alignment:.topLeading){
+                        Image("image")
+                            .resizable()
+                            .frame(width: 120, height: 120)
+                        Image(systemName:"xmark.circle.fill")
+                            .background()
+                            .cornerRadius(90)
+                            .padding(6)
                     }
+                    
+                    VStack(alignment: .leading, spacing: 50) {
+                        HStack(alignment:.bottom){
+                            Text("La Calera, Colombia")
+                                .font(.caption)
+                                .fontWeight(.semibold)
+                            Spacer()
+                            Image(systemName: "heart")
+                        }
+                        
+                        HStack(alignment:.bottom){
+                            VStack{
+                                Text("Nov 19 - 24")
+                                    .font(.caption)
+                                    .fontWeight(.light)
+                                    .padding(.trailing,2)
+                                Text("S/ 268 night")
+                                    .font(.caption)
+                                
+                            }
+                            Spacer()
+                            HStack{
+                                Image(systemName: "star.fill")
+                                    .resizable()
+                                    .frame(width: 8, height: 8)
+                                Text("4.91")
+                                    .font(.caption)
+                            }
+                                
+                        }
+                        
+                    }
+                    
                     .padding(.vertical)
                     Spacer()
-                    VStack {
-                        Image(systemName: "heart")
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                            .padding(.top, 10)
-                        Spacer()
-                    }
-                    .padding(.trailing)
                 }
                 .frame(height: 120)
                 .background(.white)
@@ -62,7 +70,6 @@ struct TripsView: View {
         }
     }
 }
-
 struct TripsView_Previews: PreviewProvider {
     static var previews: some View {
         TripsView()
