@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false){
+        
         VStack {
-            
+            ScrollView(.horizontal, showsIndicators: false){
                 HStack(spacing: 50) {
                     Category(icon: "ovni", text: "OMG!")
                     Category(icon: "beaches", text: "Beaches")
@@ -19,14 +19,19 @@ struct ContentView: View {
                     Category(icon: "golf", text: "Golfing")
                     Category(icon: "landscape", text: "Amazing")
                 }
-            }.padding([.horizontal])
+            }
+            .padding()
+            
             Divider()
             List{
                 Card()
                 Card()
                 Card()
         
-            }.listStyle(.inset)
+            }
+            .listStyle(.inset)
+            .scrollIndicators(.hidden)
+            .padding([.trailing, .leading])
         }
     }
 }
