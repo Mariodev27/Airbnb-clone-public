@@ -20,6 +20,9 @@
 		FBCB36F42AF59B8800B07CE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCB36F32AF59B8800B07CE5 /* LaunchScreen.storyboard */; };
 		FBCB36F82AF5A18600B07CE5 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB36F72AF5A18600B07CE5 /* Category.swift */; };
 		FBCB36FA2AF5ACA500B07CE5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB36F92AF5ACA500B07CE5 /* Card.swift */; };
+		FBD9B32A2B114DB800D051D0 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD9B3292B114DB800D051D0 /* Filter.swift */; };
+		FBD9B32C2B1153A600D051D0 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD9B32B2B1153A600D051D0 /* Title.swift */; };
+		FBD9B32E2B115A5600D051D0 /* Card2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD9B32D2B115A5600D051D0 /* Card2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		FBCB36F32AF59B8800B07CE5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBCB36F72AF5A18600B07CE5 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		FBCB36F92AF5ACA500B07CE5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FBD9B3292B114DB800D051D0 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		FBD9B32B2B1153A600D051D0 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		FBD9B32D2B115A5600D051D0 /* Card2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,9 @@
 				FBCB36F72AF5A18600B07CE5 /* Category.swift */,
 				FBCB36F92AF5ACA500B07CE5 /* Card.swift */,
 				FB0CB6C42AFEDA2300D649D9 /* TabIcon.swift */,
+				FBD9B3292B114DB800D051D0 /* Filter.swift */,
+				FBD9B32B2B1153A600D051D0 /* Title.swift */,
+				FBD9B32D2B115A5600D051D0 /* Card2.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -191,9 +200,12 @@
 			files = (
 				FB0CB6C32AFED4FC00D649D9 /* TripsView.swift in Sources */,
 				FBCB36E72AF5943300B07CE5 /* ContentView.swift in Sources */,
+				FBD9B32A2B114DB800D051D0 /* Filter.swift in Sources */,
 				FB0CB6BD2AFED45200D649D9 /* WishlistView.swift in Sources */,
+				FBD9B32C2B1153A600D051D0 /* Title.swift in Sources */,
 				FBCB36E52AF5943300B07CE5 /* airbnb_clone_bApp.swift in Sources */,
 				FBCB36F82AF5A18600B07CE5 /* Category.swift in Sources */,
+				FBD9B32E2B115A5600D051D0 /* Card2.swift in Sources */,
 				FB0CB6BB2AFED2B900D649D9 /* MainView.swift in Sources */,
 				FB0CB6C12AFED4CA00D649D9 /* InboxView.swift in Sources */,
 				FB0CB6BF2AFED47700D649D9 /* ProfileView.swift in Sources */,

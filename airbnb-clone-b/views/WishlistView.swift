@@ -9,7 +9,25 @@ import SwiftUI
 
 struct WishlistView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack(alignment: .center) {
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack(spacing: 20) {
+                    Filter(icon: "chevron.down", text: "Activity Type")
+                    Filter(icon: "chevron.down", text: "Price")
+                    Filter(icon: "chevron.down", text: "Language")
+                    Filter(icon: "chevron.down", text: "Others")
+                }
+            }
+            .padding()
+            Title(text: "Unforgettable activities hosted by locals")
+            VStack{
+                Image("tour")
+                ZStack{
+                    Card2()
+                }
+            }
+        }
     }
 }
 
@@ -18,3 +36,5 @@ struct WishlistView_Previews: PreviewProvider {
         WishlistView()
     }
 }
+
+//            zstack
