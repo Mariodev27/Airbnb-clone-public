@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = PlaceViewModel()
+    
     var body: some View {
         
         VStack {
@@ -23,15 +25,15 @@ struct ContentView: View {
             .padding()
             
             Divider()
-            List{
-                Card()
-                Card()
-                Card()
-        
+            List(viewModel.airbnb.places) { place in
+                Card(place: place)
             }
             .listStyle(.inset)
             .scrollIndicators(.hidden)
             .padding([.trailing, .leading])
+            .task {
+                await viewModel.loadData()
+            }
         }
     }
 }
