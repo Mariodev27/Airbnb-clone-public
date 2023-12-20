@@ -7,11 +7,19 @@
 
 import SwiftUI
 import Foundation
+import MapKit
 
 struct Airbnb: Codable {
     let places: [Place]
 }
 
+struct Location: Codable {
+    let country: String
+    let city: String
+    let latitude: Double
+    let longitude: Double
+    
+}
 struct Place: Codable, Identifiable {
     let id = UUID()
     let name: String
@@ -22,7 +30,9 @@ struct Place: Codable, Identifiable {
     let price: Double
 }
 
-struct Location: Codable {
-    let country: String
-    let city: String
+
+struct PlaceCoordinate: Identifiable {
+    let id = UUID()
+    let name: String
+    let coordinate: CLLocationCoordinate2D
 }

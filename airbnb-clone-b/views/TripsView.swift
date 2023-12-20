@@ -9,9 +9,15 @@ import SwiftUI
 import MapKit
 
 struct TripsView: View {
+    
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -12.0450947, longitude: -76.9545933), span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
-
+    
+    @StateObject var placeViewModel = PlaceViewModel()
+    
     var body: some View {
+        Map(coordinateRegion: $region, annotationItems: placeViewModel.annotations){
+            MapPin(coordinate: $0.coordinate)
+        }
         ZStack {
             Map(coordinateRegion: $region)
                 .ignoresSafeArea()
