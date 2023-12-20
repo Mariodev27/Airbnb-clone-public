@@ -35,4 +35,8 @@ struct PlaceCoordinate: Identifiable {
     let id = UUID()
     let name: String
     let coordinate: CLLocationCoordinate2D
+    let rating: Double
+    let image_url: String
+    let date: String
+    let price: Double
 }
