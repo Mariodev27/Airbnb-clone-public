@@ -11,7 +11,6 @@ struct Card2: View {
 
     var body: some View {
         VStack {
-                Spacer()
                 HStack{
                     ZStack (alignment: .topLeading){
                         Image("image")

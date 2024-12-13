@@ -9,8 +9,10 @@ import SwiftUI
 
 struct WishlistView: View {
     var body: some View {
-        
         VStack(alignment: .center) {
+            Title(text: "Unforgettable activities hosted by locals")
+                .padding(.bottom, -15) // Reducir espacio después del título
+            
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(spacing: 20) {
                     Filter(icon: "chevron.down", text: "Activity Type")
@@ -19,14 +21,17 @@ struct WishlistView: View {
                     Filter(icon: "chevron.down", text: "Others")
                 }
             }
-            .padding()
-            Title(text: "Unforgettable activities hosted by locals")
+            .padding(.horizontal)
+            
+            Spacer() // Añadir espacio para elevar el contenido
+            
             VStack{
                 Image("tour")
                 ZStack{
                     Card2()
                 }
             }
+            Spacer() // Mantener el contenido centrado verticalmente
         }
     }
 }
@@ -36,5 +41,3 @@ struct WishlistView_Previews: PreviewProvider {
         WishlistView()
     }
 }
-
-//            zstack

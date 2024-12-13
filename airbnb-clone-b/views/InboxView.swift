@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct InboxView: View {
-    @State private var selectedTab = "Mensajes"
-    let tabs = ["Mensajes", "Notificaciones"]
+    @State private var selectedTab = "Messages"
+    let tabs = ["Messages", "Notifications"]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -32,9 +32,9 @@ struct InboxView: View {
             }
             .padding([.leading, .trailing])
             switch selectedTab {
-            case "Mensajes":
-                Text("No tienes mensajes No Leidos")
-            case "Notificaciones":
+            case "Messages":
+                Text("You have no unread messages")
+            case "Notifications":
                 Text("You're all caught up")
             default:
                 EmptyView()
